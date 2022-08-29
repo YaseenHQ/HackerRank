@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int countKdivPairs(int A[], int n, int K)
+{
+    int f[K] = { 0 };
+    for (int i = 0; i < n; i++)
+        ++f[A[i] % K];
+    int sum = f[0] * (f[0] - 1) / 2;
+    for (int i = 1; i <= K / 2 && i != (K - i); i++)
+        sum += f[i] * f[K - i];
+    return sum;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int A[n];
+    for(int i=0;i<n;i++){
+        cin>>A[i];
+    }
+    int K = 7;
+    cout << countKdivPairs(A, n, K);
+ 
+    return 0;
+}
