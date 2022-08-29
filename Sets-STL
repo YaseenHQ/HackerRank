@@ -1,0 +1,29 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n;
+    set<int>s;
+    scanf("%d",&n);
+    while(n--)
+    {
+        int no,x;
+        scanf("%d %d",&no,&x);
+        switch(no)
+        {
+            case 1:s.insert(x);
+                   break;
+            case 2:s.erase(x);
+                   break;
+            case 3:(s.find(x)==s.end())?printf("No\n"):printf("Yes\n");
+                   break;          
+        }
+    }
+    return 0;
+}
