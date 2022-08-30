@@ -1,0 +1,22 @@
+SELECT ID,NAME,COUNTRYCODE,DISTRICT,POPULATION
+FROM CITY
+WHERE
+    COUNTRYCODE = 'USA'
+    AND POPULATION > 100000;
+    
+    
+    
+    
+    
+    OR 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    select * from city
+where countrycode="USA" and population>100000;
